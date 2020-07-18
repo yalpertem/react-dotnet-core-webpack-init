@@ -8,19 +8,17 @@
     <title>Hello React</title>
 </head>
 <body>
-    @Html.React("CommentBox", new
+    @*@Html.React("CommentBox", new
     {
         initialData = Model,
         url = Url.Action("Comments"),
         submitUrl = Url.Action("AddComment"),
         pollInterval = 2000,
-    })
+    })*@
 
-    @*<div id="content"></div>*@
-    @*<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.0/umd/react.development.js"></script>
-        <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.0/umd/react-dom.development.js"></script>*@
+    <div id="content">ff</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
-    <script src="~/js/dist/bundle.js"></script>
-    @Html.ReactInitJavaScript()
+    <script src="~/dist/test.js?@(DateTime.Now.Ticks)"></script>
+    @*@Html.ReactInitJavaScript()*@
 </body>
 </html>

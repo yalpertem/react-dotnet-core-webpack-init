@@ -1,6 +1,7 @@
-﻿import './comment'
+﻿import React from "react";
+import Comment from './comment'
 
-class CommentList extends React.Component {
+export default class CommentList extends React.Component {
     render() {
         const commentNodes = this.props.data.map(comment => (
             <Comment author={comment.author} key={comment.id}>

@@ -1,4 +1,6 @@
-﻿function createRemarkable() {
+﻿import React from "react";
+
+function createRemarkable() {
     var remarkable =
         'undefined' != typeof global && global.Remarkable
             ? global.Remarkable
@@ -7,7 +9,7 @@
     return new remarkable();
 }
 
-class Comment extends React.Component {
+export default class Comment extends React.Component {
     rawMarkup() {
         const md = createRemarkable();
         const rawMarkup = md.render(this.props.children.toString());

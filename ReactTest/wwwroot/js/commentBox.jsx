@@ -1,8 +1,8 @@
 ﻿import React from "react";
 import ReactDOM from "react-dom";
 
-import './commentList'
-import './commentForm'
+import CommentList from './commentList'
+import CommentForm from './commentForm'
 
 class CommentBox extends React.Component {
 
@@ -10,10 +10,10 @@ class CommentBox extends React.Component {
     //Remember to call the super class (the class we're extending, React.Component) via super(props) before using the this keyword.
     constructor(props) {
         super(props);
-        //this.state = { data: [] };
+        this.state = { data: [] };
 
         // Server side rendering
-        this.state = { data: this.props.initialData };
+        //this.state = { data: this.props.initialData };
 
         // We need to pass data from the child component back up to its parent.
         // We do this in our parent's render method by passing a new callback (handleCommentSubmit) into the child, 
@@ -63,7 +63,7 @@ class CommentBox extends React.Component {
     // to a function called loadCommentsFromServer().
     // we can then call it multiple times from componentDidMount() at a set interval to check for any updates to the comments.
     componentDidMount() {
-        //this.loadCommentsFromServer();
+        this.loadCommentsFromServer();
         window.setInterval(
             () => this.loadCommentsFromServer(),
             this.props.pollInterval,
@@ -84,17 +84,18 @@ class CommentBox extends React.Component {
 // ReactDOM.render(<CommentBox data={data} url="/comments" />, document.getElementById('content'));
 
 // Commented out for server side rendering
-/*ReactDOM.render(
-    <CommentBox url="/comments" submitUrl="/comments/new" pollInterval="5000" />,
+ReactDOM.render(
+    <CommentBox url="/comments" submitUrl="/comments/new" pollInterval="4000" />,
     document.getElementById('content')
-);*/
+);
 
-
+module.hot.accept();
 /* 
  * Sources 
  * 
  * https://reactjs.net/tutorials/aspnetcore.html
  * https://sensibledev.com/reactjs-webpack-and-asp-net-core/
- * 
+ * https://stackoverflow.com/a/58283494/2208467
+ * https://medium.com/code-oil/burning-questions-with-answers-to-why-webpack-dev-server-live-reload-does-not-work-6d6390277920
  * 
  */

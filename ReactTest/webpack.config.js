@@ -2,7 +2,9 @@
 
 module.exports = {
     mode: 'development',
-    entry: { main: './wwwroot/js/commentBox.jsx' },
+    entry: {
+        app: path.resolve(__dirname, './wwwroot/js/commentBox.jsx')
+    },
     output: {
         path: path.resolve(__dirname, './wwwroot/js/dist'),
         filename: 'bundle.js',
@@ -24,5 +26,5 @@ module.exports = {
     },
     resolve: {
         extensions: ['*', '.js', '.jsx']
-    }
+    },
 };

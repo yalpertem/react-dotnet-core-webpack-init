@@ -1,4 +1,6 @@
-﻿class CommentForm extends React.Component {
+﻿import React from "react";
+
+export default class CommentForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = { author: '', text: '' };
@@ -33,7 +35,7 @@
                 />
                 <input
                     type="text"
-                    placeholder="Say something..."
+                    placeholder="Say something dude!"
                     value={this.state.text}
                     onChange={this.handleTextChange}
                 />
