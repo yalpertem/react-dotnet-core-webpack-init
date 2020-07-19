@@ -8,17 +8,8 @@
     <title>Hello React</title>
 </head>
 <body>
-    @*@Html.React("CommentBox", new
-    {
-        initialData = Model,
-        url = Url.Action("Comments"),
-        submitUrl = Url.Action("AddComment"),
-        pollInterval = 2000,
-    })*@
-
     <div id="content">ff</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
     <script src="~/dist/test.js?@(DateTime.Now.Ticks)"></script>
-    @*@Html.ReactInitJavaScript()*@
 </body>
 </html>

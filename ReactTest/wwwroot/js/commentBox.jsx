@@ -90,12 +90,3 @@ ReactDOM.render(
 );
 
 module.hot.accept();
-/* 
- * Sources 
- * 
- * https://reactjs.net/tutorials/aspnetcore.html
- * https://sensibledev.com/reactjs-webpack-and-asp-net-core/
- * https://stackoverflow.com/a/58283494/2208467
- * https://medium.com/code-oil/burning-questions-with-answers-to-why-webpack-dev-server-live-reload-does-not-work-6d6390277920
- * 
- */

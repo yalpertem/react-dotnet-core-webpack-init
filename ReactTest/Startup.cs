@@ -9,9 +9,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Http;
-using JavaScriptEngineSwitcher.V8;
-using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
-using React.AspNet;
 
 namespace ReactTest
 {
