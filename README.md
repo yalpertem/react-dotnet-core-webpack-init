@@ -1,5 +1,5 @@
 # react-dotnet-core-webpack-init
-Starter project for React with .NET Core 3.1
+Starter project for React with .NET Core 3.1 together with webpack-dev-server.
 
 ## Helpful readings
 1. I followed this tutorial for an initial project using ReactJS.NET.
